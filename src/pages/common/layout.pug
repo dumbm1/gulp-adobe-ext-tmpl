@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        block meta
+            meta(charset="utf-8")
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+        block favicon
+        block title
+            title Site title
+        block styles
+            link(rel="stylesheet" href="css/styles.css")
+        block head_scripts
+
+    body
+        article
+            block header
+                include header
+            block content
+                H1 Hello, World!
+            block footer
+                include footer
+            block body_scripts
+                //script(src='js/main.min.js')

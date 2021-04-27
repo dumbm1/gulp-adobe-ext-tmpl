@@ -1,0 +1,13 @@
+extends common/layout
+block title
+    title Template: Pug-SCSS-JS-Gulp
+prepend styles
+    include includes/index/bs_4-5-3_styles
+
+block content
+    h1 Goodby, World (((
+
+prepend body_scripts
+    include  includes/index/bs_4-5-3_scripts
+append body_scripts
+    script(src='js/sayHi.js')

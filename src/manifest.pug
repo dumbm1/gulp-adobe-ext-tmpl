@@ -1,0 +1,52 @@
+- var extBundleId = "com.ai.myExtension"
+- var extBundleVers = "1.0.0"
+
+- var extMainId = "com.ai.myExtension.main"
+- var extMainVers = "0.0.1"
+
+<?xml version="1.0" encoding="UTF-8"?>
+ExtensionManifest(
+    ExtensionBundleId=extBundleId
+    ExtensionBundleVersion=extBundleVers
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    Version="4.0") <!-- MAJOR-VERSION-UPDATE-MARKER -->
+    ExtensionList
+        Extension(Id=extMainId Version=extMainVers)
+
+    ExecutionEnvironment
+        HostList
+            Host(Name="ILST" Version="17.0")
+        LocaleList
+            Locale(Code="All")
+        RequiredRuntimeList
+            RequiredRuntime(Name="CSXS" Version="4.0") <!-- MAJOR-VERSION-UPDATE-MARKER -->
+
+    DispatchInfoList
+        Extension(Id=extMainId)
+            DispatchInfo
+                Resources
+                    MainPath ./build/index.html
+                    ScriptPath ./build/jsx/hostscript.jsx
+                Lifecycle
+                    AutoVisible true
+                UI
+                    Type Panel
+                    Menu My Extension
+                    Geometry
+                        Size
+                            Height 400
+                            Width 600
+                        MaxSize
+                            Height 800
+                            Width 1200
+                        MinSize
+                            Height 200
+                            Width 300
+                    Icons
+                        Icon(Type="Normal") ./build/icons/iconNormal.png
+                        Icon(Type="RollOver") ./build/icons/iconRollOver.png
+                        Icon(Type="DarkNormal") ./build/icons/iconDarkNormal.png
+                        Icon(Type="DarkRollOver") ./build/icons/iconDarkRollOver.png
+
+
+
