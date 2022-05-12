@@ -1,4 +1,3 @@
-//@target illustrator-22
 //@include json2.js
 
 var opts = {
@@ -14,7 +13,7 @@ function openEpses(opts) {
   for (var i = 0, j = 0; i < files.length; i++) {
     var f = files[i];
     if (f instanceof File && f.name.slice(-4) == '.eps' && f.length <= MIN_FILE_SIZE) {
-      f.execute();
+      open(f);
     }
   }
   return JSON.stringify(files.length);
