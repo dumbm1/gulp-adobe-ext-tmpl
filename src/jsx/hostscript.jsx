@@ -10,13 +10,27 @@ function openEpses(opts) {
   var MIN_FILE_SIZE = opts.MIN_FILE_SIZE || 500000;
   var folder = opts.folder || Folder.selectDialog();
   var files = folder.getFiles();
+
+  var brushDoc = documents.getByName('window_brashes_vector-pack_grange-brashes.ai');
+  brushDoc.activate();
+  executeMenuCommand('selectall');
+  copy();
+
   for (var i = 0, j = 0; i < files.length; i++) {
     var f = files[i];
     if (f instanceof File && f.name.slice(-4) == '.eps' && f.length <= MIN_FILE_SIZE) {
-      open(f);
+      var currDoc = open(f);
+      if (currDoc == brushDoc) continue;
+      var tmpLay = currDoc.layers.add();
+      paste();
+      tmpLay.remove();
+      currDoc.close(SaveOptions.SAVECHANGES);
     }
   }
-  return JSON.stringify(files.length);
+
+  alert('finish');
+
+  // return JSON.stringify(files.length);
 }
 
 function copyPasteBrushes() {
