@@ -1,24 +1,24 @@
 {
-  "name": "gulp-adobe-ext-tmpl", // *
-  "version": "1.0.0", // *
-  "description": "", // **
+  "name": "increase2MinFileSize",
+  "version": "0.0.1",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git", // **
-    "url": "git+https://github.com/dumbm1/gulp-adobe-ext-tmpl.git" // *
+    "type": "git",
+    "url": "git+https://github.com/dumbm1/increase2MinFileSize.git"
   },
   "keywords": [],
-  "author": "", // **
-  "license": "ISC", // **
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dumbm1/gulp-adobe-ext-tmpl/issues" // *
+    "url": "https://github.com/dumbm1/increase2MinFileSize/issues"
   },
-  "homepage": "https://github.com/dumbm1/gulp-adobe-ext-tmpl#readme", // *
+  "homepage": "https://github.com/dumbm1/increase2MinFileSize#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
@@ -32,7 +32,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-real-favicon": "^0.3.2",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-w3c-html-validator": "^3.0.0",
     "node-sass": "^5.0.0",
     "replace-ext": "^2.0.0",
