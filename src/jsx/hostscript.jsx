@@ -33,6 +33,32 @@ function openEpses(opts) {
   // return JSON.stringify(files.length);
 }
 
+
+function processJpg() {
+var bt = new BridgeTalk();
+bt.target = 'photoshop';
+bt.body= sayHell.toString() + ";"  + "sayHell()";
+bt.send();
+function sayHell() {
+  var opts = opts || {};
+  var MIN_FILE_SIZE = opts.MIN_FILE_SIZE || 500000;
+  var folder = opts.folder || Folder.selectDialog();
+  var files = folder.getFiles();
+
+
+
+  for (var i = 0, j = 0; i < files.length; i++) {
+    var f = files[i];
+    if (f instanceof File && f.name.slice(-4) == '.jpg' && f.length <= MIN_FILE_SIZE) {
+      var currDoc = open(f);
+      // currDoc.resize()
+      // currDoc.close(SaveOptions.SAVECHANGES);
+    }
+  }
+
+}
+}
+
 function copyPasteBrushes() {
 
   try {

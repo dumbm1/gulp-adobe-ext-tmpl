@@ -29,37 +29,15 @@
 
     $("#btn_refrash").click(reloadPanel);
 
-    $("#btn_open").click(function() {
-      csInterface.evalScript('openEpses()', function (res) {
-        // alert(res);
-
-      });
-
-    });
-    $("#btn_process").click(() => {
-      csInterface.evalScript('copyPasteBrushes()', function (res) {
-      });
-    });
-    $("#btn_close").click(() => {
-      csInterface.evalScript('closeOther()', function (res) {
-      });
+    $("#btn_open").click(function () {
+      csInterface.evalScript('openEpses()', function (res) {});
     });
 
-    /*    csInterface.evalScript('openEpses()', function (result) {
-     setTimeout(function () {
-
-     }, 1000);
-     opts.symbolName = result;
-
-     csInterface.evalScript('postProcess(' + JSON.stringify(opts) + ')');
-     });*/
+    $("#btn_go-jpg").click(() => {
+      csInterface.evalScript('processJpg()', function (res) {});
+    });
 
   }
-
-  /*  function loadJSX(fileName) {
-   var extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION) + "/jsx/";
-   csInterface.evalScript('$.evalFile("' + extensionRoot + fileName + '")');
-   }*/
 
   // Reloads extension panel
   function reloadPanel() {
